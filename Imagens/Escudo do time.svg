@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" width="100%" height="100%">
+  <defs>
+    <!-- Gradiente Vermelho Principal -->
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E61C24" />
+      <stop offset="50%" stop-color="#C41230" />
+      <stop offset="100%" stop-color="#8B0000" />
+    </linearGradient>
+
+    <!-- Gradiente Amarelo/Dourado -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFDF00" />
+      <stop offset="50%" stop-color="#FDB913" />
+      <stop offset="100%" stop-color="#D4AF37" />
+    </linearGradient>
+
+    <!-- Gradiente Escuro para Fundo Interno -->
+    <linearGradient id="darkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#220000" />
+      <stop offset="100%" stop-color="#0a0000" />
+    </linearGradient>
+
+    <!-- Sombra Projetada -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="5" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Fundo / Sombra do Escudo -->
+  <path d="M 250 20 L 450 80 C 450 280, 380 450, 250 560 C 120 450, 50 280, 50 80 Z" 
+        fill="url(#goldGrad)" filter="url(#dropShadow)" />
+
+  <!-- Borda Externa Dourada/Branca -->
+  <path d="M 250 30 L 440 87 C 440 275, 372 438, 250 545 C 128 438, 60 275, 60 87 Z" 
+        fill="#FFFFFF" />
+
+  <!-- Corpo Principal do Escudo (Vermelho) -->
+  <path d="M 250 42 L 428 95 C 428 268, 362 425, 250 530 C 138 425, 72 268, 72 95 Z" 
+        fill="url(#redGrad)" />
+
+  <!-- Detalhe Geométrico / Divisão Interna -->
+  <path d="M 250 55 L 415 105 C 415 260, 350 410, 250 510 C 150 410, 85 260, 85 105 Z" 
+        fill="url(#darkGrad)" stroke="url(#goldGrad)" stroke-width="4" />
+
+  <!-- Elemento Central Estilizado (Estrela Dinâmica / M) -->
+  <g transform="translate(250, 260)">
+    <!-- Brilho de Fundo da Estrela -->
+    <polygon points="0,-120 35,-35 120,-20 55,40 70,120 0,75 -70,120 -55,40 -120,-20 -35,-35" 
+             fill="url(#goldGrad)" opacity="0.25" />
+    
+    <!-- Estrela Central -->
+    <polygon points="0,-90 26,-28 90,-15 42,30 54,94 0,58 -54,94 -42,30 -90,-15 -26,-28" 
+             fill="url(#goldGrad)" stroke="#FFFFFF" stroke-width="2" filter="url(#dropShadow)" />
+             
+    <!-- Miolo da Estrela em Vermelho -->
+    <polygon points="0,-65 19,-20 65,-11 30,22 39,68 0,42 -39,68 -30,22 -65,-11 -19,-20" 
+             fill="url(#redGrad)" />
+  </g>
+
+  <!-- Curvas de Texto Superior (MARVEL) -->
+  <path id="curveTop" d="M 110,180 A 160,160 0 0,1 390,180" fill="none" stroke="none" />
+  <text font-family="'Arial Black', Impact, sans-serif" font-weight="900" font-size="44" fill="#FFFFFF" letter-spacing="4">
+    <textPath href="#curveTop" startOffset="50%" text-anchor="middle" filter="url(#dropShadow)">
+      MARVEL
+    </textPath>
+  </text>
+  
+  <!-- Sombra do Texto Superior para Contraste -->
+  <path id="curveTopG" d="M 108,182 A 160,160 0 0,1 392,182" fill="none" stroke="none" />
+  <text font-family="'Arial Black', Impact, sans-serif" font-weight="900" font-size="44" fill="url(#goldGrad)" letter-spacing="4">
+    <textPath href="#curveTopG" startOffset="50%" text-anchor="middle">
+      MARVEL
+    </textPath>
+  </text>
+
+  <!-- Curvas de Texto Inferior (ESPORTE CLUBE) -->
+  <path id="curveBottom" d="M 120,440 A 180,180 0 0,0 380,440" fill="none" stroke="none" />
+  <text font-family="'Arial Black', Impact, sans-serif" font-weight="bold" font-size="22" fill="url(#goldGrad)" letter-spacing="3">
+    <textPath href="#curveBottom" startOffset="50%" text-anchor="middle" filter="url(#dropShadow)">
+      ESPORTE CLUBE
+    </textPath>
+  </text>
+
+  <!-- Detalhes de Listras Brancas Decorativas nas Laterais -->
+  <path d="M 88 120 L 105 130 L 98 190 Z" fill="#FFFFFF" opacity="0.8" />
+  <path d="M 412 120 L 395 130 L 402 190 Z" fill="#FFFFFF" opacity="0.8" />
+  
+  <!-- Pequenas Estrelas de Fundação (Ex: Títulos) -->
+  <polygon points="150,380 154,390 165,392 157,400 159,410 150,405 141,410 143,400 135,392 146,390" fill="url(#goldGrad)" />
+  <polygon points="350,380 354,390 365,392 357,400 359,410 350,405 341,410 343,400 335,392 346,390" fill="url(#goldGrad)" />
+</svg>
